@@ -1,9 +1,7 @@
-import Link from "next/link"
+import HomeItem from "@/components/home/HomeItem"
 
 export default function Home() {
   return (
-    <div>
-      <Link href={"/dashboard"}>go to dashboard</Link>
-    </div>
+    <HomeItem />
   )
 }

@@ -1,9 +1,10 @@
-import Link from "next/link"
+import HomeItem from "@/components/home/HomeItem"
 
-export default function page() {
+const Homepage = () => {
+
   return (
-    <div>
-      <Link href={"/dashboard"}>go to dashboard</Link>
-    </div>
+    <HomeItem />
   )
 }
+
+export default Homepage
