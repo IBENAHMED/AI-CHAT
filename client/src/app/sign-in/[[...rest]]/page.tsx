@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { SignIn, UserButton } from "@clerk/nextjs"
+import {SignIn, UserButton} from "@clerk/nextjs"
 
 export default function Page() {
   return (
@@ -13,8 +13,8 @@ export default function Page() {
           <UserButton />
         </nav>
       </header>
-      <div className={"flex justify-center items-center bg-[#212121]"} style={{ height: "calc(100% - 63.98px)" }}>
-        <SignIn forceRedirectUrl={"/dashboard"}/>
+      <div className={"flex justify-center items-center bg-[#212121]"} style={{height: "calc(100% - 63.98px)"}}>
+        <SignIn forceRedirectUrl={"/dashboard"} />
       </div>
     </div>
   )

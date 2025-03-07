@@ -1,19 +1,15 @@
 "use client"
 
-import {createContext, useContext, useState} from 'react'
+import {createContext, useContext, useState} from "react"
 
-const StateContext = createContext();
+const StateContext = createContext()
 
 export const useStateContext = () => {
-  return useContext(StateContext);
-};
+  return useContext(StateContext)
+}
 
 export const StateProvider = ({children}) => {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState("")
 
-  return (
-    <StateContext.Provider value={{value, setValue}}>
-      {children}
-    </StateContext.Provider>
-  );
-};
+  return <StateContext.Provider value={{value, setValue}}>{children}</StateContext.Provider>
+}

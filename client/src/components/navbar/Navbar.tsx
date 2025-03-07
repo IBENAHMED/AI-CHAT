@@ -4,7 +4,6 @@ import Link from "next/link"
 import {SignedIn, UserButton} from "@clerk/nextjs"
 
 export default function Navbar() {
-
   return (
     <SignedIn>
       <header>

@@ -12,7 +12,6 @@ const safetySettings = [
   },
 ]
 
-
 const genAI = new GoogleGenerativeAI("AIzaSyBBckAn4CogRaPBgMCJZR3GnvDb9WE32Lc")
 const model = genAI.getGenerativeModel({model: "gemini-1.5-flash", safetySettings})
 

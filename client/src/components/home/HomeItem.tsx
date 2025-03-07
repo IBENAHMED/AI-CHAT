@@ -12,32 +12,29 @@ export default function HomeItem() {
           </Link>
         </nav>
       </header>
-      <div className="homepage bg-[#212121]">
-        <div className="homepage_container">
-          <div className="left">
+      <div className='homepage bg-[#212121]'>
+        <div className='homepage_container'>
+          <div className='left'>
             <h1>CHAT AI</h1>
             <h2>Supercharge your creativity and productivity</h2>
-            <h3>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat sint
-              dolorem doloribus, architecto dolor.
-            </h3>
-            <Link href="/dashboard">Get Started</Link>
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat sint dolorem doloribus, architecto dolor.</h3>
+            <Link href='/dashboard'>Get Started</Link>
           </div>
-          <div className="right">
-            <div className="imgContainer">
-              <div className="bgContainer">
-                <div className="bg"></div>
+          <div className='right'>
+            <div className='imgContainer'>
+              <div className='bgContainer'>
+                <div className='bg'></div>
               </div>
-              <img src="/bot.png" alt="" className="bot" />
+              <img src='/bot.png' alt='' className='bot' />
             </div>
           </div>
         </div>
-        <div className="terms">
-          <img src="/logo.png" alt="" />
-          <div className="links">
-            <Link href="/">Terms of Service</Link>
+        <div className='terms'>
+          <img src='/logo.png' alt='' />
+          <div className='links'>
+            <Link href='/'>Terms of Service</Link>
             <span>|</span>
-            <Link href="/">Privacy Policy</Link>
+            <Link href='/'>Privacy Policy</Link>
           </div>
         </div>
       </div>

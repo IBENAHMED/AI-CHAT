@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
 import "./globals.css"
 import {ClerkProvider} from "@clerk/nextjs"
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
-import { StateProvider } from '../components/context/StateContext'
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
+import {StateProvider} from "../components/context/StateContext"
 
 export default function RootLayout({
   children,
@@ -14,12 +14,10 @@ export default function RootLayout({
 
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang='en'>
         <QueryClientProvider client={queryClient}>
           <body>
-            <StateProvider>
-              {children}
-            </StateProvider>
+            <StateProvider>{children}</StateProvider>
           </body>
         </QueryClientProvider>
       </html>

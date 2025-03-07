@@ -7,9 +7,9 @@ export default function page() {
     <article>
       <Navbar />
       <div className={"flex items-start"}>
-        <DashboardLayout/>
+        <DashboardLayout />
         <div className={"flex-1"}>
-          <DashboardItem/>
+          <DashboardItem />
         </div>
       </div>
     </article>

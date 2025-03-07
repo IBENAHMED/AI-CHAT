@@ -1,7 +1,7 @@
 "use client"
 
-import { useRef } from "react"
-import { IKUpload, ImageKitProvider } from "imagekitio-next"
+import {useRef} from "react"
+import {IKUpload, ImageKitProvider} from "imagekitio-next"
 
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT
 const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
@@ -16,23 +16,22 @@ const authenticator = async () => {
     }
 
     const data = await response.json()
-    const { signature, expire, token } = data
-    return { signature, expire, token }
+    const {signature, expire, token} = data
+    return {signature, expire, token}
   } catch (error: any) {
     throw new Error(`Authentication request failed: ${error.message}`)
   }
 }
 
 export default function Upload({setImg}: any) {
-
   const ikUploadRef: any = useRef(null)
 
   const onError = (err: any) => {
-    setImg((prev: any) => ({ ...prev, isLoading: false, error: err.message }))    
+    setImg((prev: any) => ({...prev, isLoading: false, error: err.message}))
   }
-  
+
   const onSuccess = (res: any) => {
-    setImg((prev: any) => ({ ...prev, isLoading: false, dbData: res}))
+    setImg((prev: any) => ({...prev, isLoading: false, dbData: res}))
   }
 
   const onUploadStart = (res: any) => {
@@ -56,22 +55,15 @@ export default function Upload({setImg}: any) {
 
   return (
     <>
-      <div className="App">
+      <div className='App'>
         <ImageKitProvider publicKey={publicKey} urlEndpoint={urlEndpoint} authenticator={authenticator}>
           <div>
-            <IKUpload 
-              fileName="test-upload.png" 
-              onError={onError} 
-              onUploadStart={onUploadStart}
-              onSuccess={onSuccess} 
-              style={{display:"none"}}
-              ref={ikUploadRef}
-            />
-          {
-            <label onClick={() => ikUploadRef.current.click()}>
-              <img className={"w-5 h-5 cursor-pointer"} src={"/attachment.png"} alt={"image attachment"}/>
-            </label>
-          }
+            <IKUpload fileName='test-upload.png' onError={onError} onUploadStart={onUploadStart} onSuccess={onSuccess} style={{display: "none"}} ref={ikUploadRef} />
+            {
+              <label onClick={() => ikUploadRef.current.click()}>
+                <img className={"w-5 h-5 cursor-pointer"} src={"/attachment.png"} alt={"image attachment"} />
+              </label>
+            }
           </div>
         </ImageKitProvider>
       </div>
