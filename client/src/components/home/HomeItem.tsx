@@ -1,23 +1,25 @@
 import "./HomeItem.css"
+
 import Link from "next/link"
+import Logo from "@/components/icon/Logo"
 
 export default function HomeItem() {
   return (
-    <article>
+    <article className={"bg-[#212121]"}>
       <header>
-        <nav className={"flex justify-between items-center px-5 py-3 bg-[#212121]"}>
+        <nav className={"flex justify-between items-center px-5 py-3"}>
           <Link href={"/home"} className={"flex gap-2.5 items-center"}>
-            <img src={"/logo.png"} alt={"image logo"} className={"w-10 h-10"} />
-            <span className={"text-white"}>LAMA AI</span>
+            <Logo />
+            <span className={"text-white"}>UNICORN AI</span>
           </Link>
         </nav>
       </header>
-      <div className='homepage bg-[#212121]'>
+      <div className='homepage mt-10'>
         <div className='homepage_container'>
           <div className='left'>
             <h1>CHAT AI</h1>
             <h2>Supercharge your creativity and productivity</h2>
-            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat sint dolorem doloribus, architecto dolor.</h3>
+            <h3>ChatAI helps you get answers, find inspiration and be more productive. It is free to use and easy to try. Just ask and ChatAI can help with writing.</h3>
             <Link href='/dashboard'>Get Started</Link>
           </div>
           <div className='right'>
@@ -29,8 +31,8 @@ export default function HomeItem() {
             </div>
           </div>
         </div>
-        <div className='terms'>
-          <img src='/logo.png' alt='' />
+        <div className='terms mt-5'>
+          <Logo/>
           <div className='links'>
             <Link href='/'>Terms of Service</Link>
             <span>|</span>

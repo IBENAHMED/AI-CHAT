@@ -1,6 +1,9 @@
+article {
+  height: 100vh;
+}
+
 .homepage {
-  padding-top: 55px;
-  height: calc(100vh - 63.98px);
+  /* height: 100%; */
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     gap: 0px;
@@ -22,7 +25,7 @@
 
     h1 {
       font-size: 128px;
-      background: linear-gradient(to right, #217bfe, #e55571);
+      background: linear-gradient(to right, #2a3a53, #6b9f51);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;

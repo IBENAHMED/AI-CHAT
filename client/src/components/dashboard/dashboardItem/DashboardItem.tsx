@@ -1,14 +1,20 @@
 "use client"
 
-import {useMutation, useQueryClient} from "@tanstack/react-query"
 import "./DashboardItem.css"
+
 import {useRouter} from "next/navigation"
+import {useMutation, useQueryClient} from "@tanstack/react-query"
 import {useStateContext} from "@/components/context/StateContext"
 
+import Logo from "@/components/icon/Logo"
+
 export default function DashboardItem() {
-  const queryClient = useQueryClient()
-  const router = useRouter()
+  
   const {setValue} = useStateContext()
+  
+  const queryClient = useQueryClient()
+  
+  const router = useRouter()
 
   const mutation = useMutation({
     mutationFn: (text) => {
@@ -22,7 +28,6 @@ export default function DashboardItem() {
       }).then((res) => res.json())
     },
     onSuccess: (id) => {
-      // Invalidate and refetch
       queryClient.invalidateQueries({queryKey: ["userChats"]})
       router.push(`/dashboard/chat/${id}`)
     },
@@ -41,8 +46,8 @@ export default function DashboardItem() {
     <div className='dashboardPage'>
       <div className='texts'>
         <div className='logo'>
-          <img src='/logo.png' alt='' />
-          <h1>LAMA AI</h1>
+          <Logo/>
+          <h1>UNICORN AI</h1>
         </div>
         <div className='options'>
           <div className='option'>
@@ -50,7 +55,7 @@ export default function DashboardItem() {
             <span className={"text-white"}>Create a New Chat</span>
           </div>
           <div className='option'>
-            <img src='/logo.png' alt='' />
+            <Logo/>
             <span className={"text-white"}>Analyze Images</span>
           </div>
           <div className='option'>

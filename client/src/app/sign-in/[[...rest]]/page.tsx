@@ -1,14 +1,15 @@
 import Link from "next/link"
 import {SignIn, UserButton} from "@clerk/nextjs"
+import Logo from "@/components/icon/Logo"
 
 export default function Page() {
   return (
-    <div className={"w-full h-screen"}>
+    <div className={"w-full h-screen bg-[#212121]"}>
       <header>
-        <nav className={"flex justify-between items-center px-5 py-3 bg-[#212121]"}>
+        <nav className={"flex justify-between items-center px-5 py-3"}>
           <Link href={"/home"} className={"flex gap-2.5 items-center"}>
-            <img src={"/logo.png"} alt={"image logo"} className={"w-10 h-10"} />
-            <span className={"text-white"}>LAMA AI</span>
+            <Logo/>
+            <span className={"text-white"}>UNICORN AI</span>
           </Link>
           <UserButton />
         </nav>

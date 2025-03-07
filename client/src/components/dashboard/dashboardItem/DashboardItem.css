@@ -1,5 +1,5 @@
 .dashboardPage {
-  height: calc(100vh - 64.98px);
+  min-height: calc(100vh - 53px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +79,7 @@
 
       input {
         flex: 1;
-        padding: 5px 20px;
+        padding: 10px 20px 0px 20px;
         background-color: transparent;
         border: none;
         outline: none;
@@ -91,6 +91,7 @@
         border: none;
         cursor: pointer;
         padding: 3px;
+        margin-top: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
