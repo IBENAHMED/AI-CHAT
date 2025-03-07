@@ -8,7 +8,7 @@ export default function Page() {
       <header>
         <nav className={"flex justify-between items-center px-5 py-3"}>
           <Link href={"/home"} className={"flex gap-2.5 items-center"}>
-            <Logo/>
+            <Logo />
             <span className={"text-white"}>UNICORN AI</span>
           </Link>
           <UserButton />

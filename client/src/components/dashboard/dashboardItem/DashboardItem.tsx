@@ -9,11 +9,10 @@ import {useStateContext} from "@/components/context/StateContext"
 import Logo from "@/components/icon/Logo"
 
 export default function DashboardItem() {
-  
   const {setValue} = useStateContext()
-  
+
   const queryClient = useQueryClient()
-  
+
   const router = useRouter()
 
   const mutation = useMutation({
@@ -46,7 +45,7 @@ export default function DashboardItem() {
     <div className='dashboardPage'>
       <div className='texts'>
         <div className='logo'>
-          <Logo/>
+          <Logo />
           <h1>UNICORN AI</h1>
         </div>
         <div className='options'>
@@ -55,7 +54,7 @@ export default function DashboardItem() {
             <span className={"text-white"}>Create a New Chat</span>
           </div>
           <div className='option'>
-            <Logo/>
+            <Logo />
             <span className={"text-white"}>Analyze Images</span>
           </div>
           <div className='option'>

@@ -32,7 +32,7 @@ export default function HomeItem() {
           </div>
         </div>
         <div className='terms mt-5'>
-          <Logo/>
+          <Logo />
           <div className='links'>
             <Link href='/'>Terms of Service</Link>
             <span>|</span>

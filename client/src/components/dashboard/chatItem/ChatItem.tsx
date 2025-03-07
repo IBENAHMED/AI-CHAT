@@ -19,15 +19,14 @@ import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query"
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT
 
 export default function ChatItem() {
-
   const queryClient = useQueryClient()
-  
+
   const {value} = useStateContext()
-  
+
   const endRef: any = useRef(null)
   const formRef: any = useRef(null)
   const hasRun = useRef(false)
-  
+
   const [question, setQuestion]: any = useState(null)
   const [answer, setAnswer]: any = useState(null)
   const [img, setImg]: any = useState({isLoading: false, error: "", dbData: {}, aiData: {}})
@@ -43,7 +42,7 @@ export default function ChatItem() {
   }, [])
 
   useEffect(() => {
-    endRef.current.scrollIntoView({ behavior: "smooth" })
+    endRef.current.scrollIntoView({behavior: "smooth"})
   }, [question, answer, img.dbData])
 
   const {isPending, error, data} = useQuery({
@@ -65,8 +64,7 @@ export default function ChatItem() {
         parts: [{text: "Greate to meet you"}],
       },
     ],
-    generationConfig: {
-    },
+    generationConfig: {},
   })
 
   const mutation = useMutation({

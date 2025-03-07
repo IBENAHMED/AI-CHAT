@@ -10,7 +10,7 @@ export default function Navbar() {
       <header>
         <nav className={"flex justify-between items-center px-5 py-3 bg-[#212121]"}>
           <Link href={"/home"} className={"flex gap-2.5 items-center"}>
-            <Logo/>
+            <Logo />
             <span className={"text-white"}>UNICORN AI</span>
           </Link>
           <UserButton />

@@ -61,7 +61,7 @@ export default function DashboardLayout() {
             <hr className={"mt-3 text-gray-600"} />
           </div>
           <div className='upgrade flex items-center gap-3 py-3'>
-            <Logo/>
+            <Logo />
             <div className={"text-white"}>
               <p className={"text-xs"}>Upgrade to Unicorn AI Pro</p>
               <p className={"text-gray-500 text-xs"}>Get unlimited access to all features</p>
